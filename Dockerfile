@@ -10,8 +10,8 @@ RUN apt-get update -y && \
 
 # Apply Nginx configuration
 ADD config/nginx.conf /opt/etc/nginx.conf
-ADD config/site /etc/nginx/sites-available/site
-RUN ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/site && \
+ADD config/joomla /etc/nginx/sites-available/joomla
+RUN ln -s /etc/nginx/sites-available/joomla /etc/nginx/sites-enabled/joomla && \
     rm /etc/nginx/sites-enabled/default
 
 # Nginx startup script
